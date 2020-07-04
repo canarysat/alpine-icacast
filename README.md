@@ -5,11 +5,52 @@ Icecast 2 for Docker
 ```
 docker run -d -p 8000:8000 canarysat/alpine-icecast:latest
 ```
-Supported ENV variables:
 
+Supported ENV variables:
 ```
-ICECAST_SOURCE_PASSWORD, ICECAST_ADMIN_PASSWORD, ICECAST_RELAY_PASSWORD
-ICECAST_ADMIN_USERNAME, ICECAST_ADMIN_EMAIL
-ICECAST_LOCATION, ICECAST_HOSTNAME
-ICECAST_MAX_CLIENTS, ICECAST_MAX_SOURCES
+- ICECAST_SOURCE_PASSWORD=abcd
+- ICECAST_ADMIN_PASSWORD=abcd
+- ICECAST_RELAY_PASSWORD=abcd
+- ICECAST_ADMIN_USERNAME=admin
+- ICECAST_ADMIN_EMAIL=admin@abcd.com
+- ICECAST_LOCATION=Canary Island
+- ICECAST_HOSTNAME=RadioCanaryIsland
+- ICECAST_MAX_CLIENTS=100
+- ICECAST_MAX_SOURCES=2
+```
+
+Supported Volumes:
+```
+  volumes:
+    - '$PWD/config:/etc/icecast2'
+    - '$PWD/logs:/var/log/icecast2'
+```
+
+Docker-compose:
+```
+version: '3'
+
+services:
+
+  icecast:
+    image: canarysat/alpine-icecast:latest
+    network_mode: bridge
+    restart: always
+    container_name: icecast
+    environment:
+      - ICECAST_SOURCE_PASSWORD=abcd
+      - ICECAST_ADMIN_PASSWORD=abcd
+      - ICECAST_RELAY_PASSWORD=abcd
+      - ICECAST_ADMIN_USERNAME=admin
+      - ICECAST_ADMIN_EMAIL=admin@abcd.com
+      - ICECAST_LOCATION=Canary Island
+      - ICECAST_HOSTNAME=RadioCanaryIsland
+      - ICECAST_MAX_CLIENTS=100
+      - ICECAST_MAX_SOURCES=2
+  ports:
+    - "3306:3306"
+  volumes:
+    - '$PWD/config:/etc/icecast2'
+    - '$PWD/logs:/var/log/icecast2'
+
 ```
