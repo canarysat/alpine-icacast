@@ -1,4 +1,4 @@
-# alpine-icacst
+# alpine-icacast
 Icecast Stream Docker image running on Alpine Linux
 
 Icecast 2 for Docker base on Alpine Latest
