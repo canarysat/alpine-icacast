@@ -3,7 +3,7 @@ Icecast Stream Docker image running on Alpine Linux
 
 Icecast 2 for Docker
 ```
-docker run -d -p 8000:8000 infiniteproject/icecast
+docker run -d -p 8000:8000 canarysat/alpine-icecast:latest
 ```
 Supported ENV variables:
 
