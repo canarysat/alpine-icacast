@@ -47,9 +47,9 @@ services:
     - ICECAST_ADMIN_PASSWORD=123456
     - ICECAST_RELAY_PASSWORD=abcd
     - ICECAST_ADMIN_USERNAME=admin
-    - ICECAST_ADMIN_EMAIL=admin@abcd.com
-    - ICECAST_LOCATION=Canary Island
-    - ICECAST_HOSTNAME=RadioCanaryIsland
+    - ICECAST_ADMIN_EMAIL=user@domain.com
+    - ICECAST_LOCATION=CanarySAT Server Streaming
+    - ICECAST_HOSTNAME=CanarySAT-Radios
     - ICECAST_MAX_CLIENTS=100
     - ICECAST_MAX_SOURCES=2
 ```
