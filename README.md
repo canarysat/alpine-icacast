@@ -1,7 +1,7 @@
 # alpine-icacst
 Icecast Stream Docker image running on Alpine Linux
 
-Icecast 2 for Docker
+Icecast 2 for Docker base on Alpine Latest
 ```
 docker run -d -p 8000:8000 canarysat/alpine-icecast:latest
 ```
