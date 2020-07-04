@@ -52,8 +52,6 @@ services:
     - ICECAST_HOSTNAME=RadioCanaryIsland
     - ICECAST_MAX_CLIENTS=100
     - ICECAST_MAX_SOURCES=2
-
-```
 ```
 
 Create the LOGS directory:
