@@ -25,6 +25,8 @@ RUN chmod +x /entrypoint.sh
 
 VOLUME [ "/var/log/icecast2", "/etc/icecast2" ]
 
+COPY config/icecast.xml /etc/icecast2/
+
 EXPOSE 8000
 
 ENTRYPOINT ["/entrypoint.sh"]
